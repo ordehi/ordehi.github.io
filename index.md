@@ -1,1 +1,2 @@
-## A Blog to blog on, with?
+## Not a Dev
+A Blog
