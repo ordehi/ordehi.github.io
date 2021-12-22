@@ -1,29 +1,30 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-12-22 01:53:00 -0400
-categories: jekyll update
+title: 'My Obligatory "Hello, World!" post'
+date: 2021-12-22 13:23:00 -0400
+categories: me update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+It had to be done, a `Hello, World!` post. Just as every first program a learner writes outputs "Hello, World!" in some way; in the necessity of having something here other than the example welcome post Jekyll comes with, this is
 
-`YEAR-MONTH-DAY-title.MARKUP`
+> My Obligatory "Hello, World!" post
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Obligatory is a fun word, it's like mandatory or compulsory, but sounds and it's more difficult to pronounce. I should know, I'm not a native speaker, so when a word isn't your standard "hello" and it's more akin to "world," I might end up butchering the r's.
 
-Jekyll also offers powerful support for code snippets:
+This is how "Hello, World!" looks like in Jekyll (Ruby):
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
+def hello_world()
+puts "Hello, World!"
 end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+hello_world()
+#=> prints 'Hello, World!' to STDOUT. Who would've thought?
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+There's a pretty cool way to interpolate links into text which I'm using here to link my [Github profile][github-profile], mostly so that I don't forget how to use this neat trick. I tend to forget small stuff like this if I don't use some sort of mnemonic approach to my actions. By the way, if you click the link it'll open in the same window, so please do come back!
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Thanks for reading this useful pointless post. I hope to put out more pointed stuff as I learn whatever it is I'm learning at the time.
+
+Cheers!
+
+[github-profile]: https://github.com/ordehi
