@@ -46,3 +46,4 @@ kramdown:
 
 include:
   - .htaccess
+  - _sass
