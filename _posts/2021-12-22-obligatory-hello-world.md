@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '2021-12-22-obligatory-hello-world'
+title: '2021-12-22-obligatory-hello-world.md'
 date: 2021-12-22 13:23:00 -0400
 categories: me update
 ---
