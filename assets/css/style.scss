@@ -6,4 +6,5 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize.scss",
   "minima/_base.scss",
-  "minima/_layout.scss";
+  "minima/_layout.scss",
+  "minima/custom-styles.scss";
