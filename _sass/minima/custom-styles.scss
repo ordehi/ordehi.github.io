@@ -1,2 +1,190 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+// Custom styles taken from Minimalist theme by BDHU https://github.com/BDHU/minimalist
+
+body {
+  padding:50px;
+  font-weight:400;
+}
+
+// .page-content {
+//   width: 610px;
+//   float: right;
+//   padding-bottom: 30px;
+// }
+
+// added
+p.link {
+  margin:0 0 4px;
+}
+
+// added
+ul.link {
+  list-style-type: none; /* Remove bullets */
+  margin: 0; /* To remove default bottom margin */ 
+  padding: 0.4px; /* To remove default left padding */
+}
+
+ul.link li + li {
+  margin-top: 6px;
+}
+
+ul.link:last-child {
+  margin-bottom: 6px;
+}
+
+.wrapper {
+  width:860px;
+  margin: 0 auto;
+}
+
+.page-content {
+  width: 630px;
+  float: right;
+}
+
+img {
+  max-width:100%;
+}
+
+.sidebar {
+  width:200px;
+  float:left;
+  position:fixed;
+  -webkit-font-smoothing:subpixel-antialiased;
+  top: 0;
+  padding: 58px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar; // IE10+
+}
+
+.sidebar header {
+  padding: 10px;
+}
+
+// Disables the scrollbar in Firefox
+// HTML-Proofer fails without "@-moz-document url-prefix()"
+// because scrollbar-width is still experimental in Firefox.
+@-moz-document url-prefix() {
+  .sidebar {
+    scrollbar-width: none;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  /* Chrome, Safari, Edge */
+  display: none;
+}
+
+footer, .sidebar-footer {
+  width:185px;
+  float:left;
+  bottom:30px;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+footer {
+  display: none;
+}
+
+.sidebar-footer {
+  flex-basis: content;
+}
+
+@media print, screen and (max-width: 960px) {
+
+  .sidebar {
+    padding: initial;
+    display: initial;
+    height: initial;
+    overflow: initial;    
+  }
+
+  .sidebar header {
+    padding: 0px;
+  }
+
+  footer {
+    display: initial;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  div.wrapper {
+    width:auto;
+    margin:30px;
+  }
+
+  .sidebar, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  .page-content {
+    float: none;
+    width: auto;
+  }
+
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+  
+  .link-wrapper {
+    display: none !important;
+  }
+
+  .img-circle {
+    display: none !important;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
+}
+
+.link-wrapper-mobile {
+  margin-bottom: 20px;
+}
+
+@media print, screen and (min-width: 961px) {
+  .link-wrapper-mobile {
+    display: none !important;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+}
+

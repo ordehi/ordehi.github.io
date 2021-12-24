@@ -35,6 +35,7 @@ minima:
     github: ordehi
     linkedin: ordehi
     twitter: mevreidez
+  date_format: '%Y-%-m-%-d'
 sass:
   sass_dir: _sass
   style: compressed
@@ -44,6 +45,11 @@ plugins:
   - jekyll-octicons
   - jekyll-github-metadata
 
+header_pages:
+  - _pages/about.markdown
+
+include:
+  - _pages
 titles_from_headings:
   enabled: true
   strip_title: true

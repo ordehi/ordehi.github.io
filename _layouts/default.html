@@ -4,16 +4,70 @@
   {%- include head.html -%}
 
   <body>
+<div class="wrapper">
+  <div class="sidebar">
+    <header>
+      {% if site.logo %}
+        <img class="img-circle" rel="prefetch" src="{{site.logo | relative_url}}" alt="Logo">
+      {% endif %}
 
-    {%- include header.html -%}
+      {% if site.blank_title %}
+        <h1>{{ site.title }}</h1>
+      {% else %}
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+      {% endif %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+      {% if site.email %}
+        <p class="addr"></p>
+      {% endif %}
+
+      <p>{{ site.description }}</p>
+
+      {% include sidebar.html %}
+
+    </header>
+
+    <div class="sidebar-footer">
+      <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+      <div class="sidebar-footer-wrapper">
+    
+        <div class="footer-col-wrapper">
+          <div class="footer-col">
+            <p class="feed-subscribe">
+              <a href="{{ 'feed.xml' | relative_url }}">
+                <svg class="svg-icon orange">
+                  <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+                </svg><span>Subscribe</span>
+              </a>
+            </p>
+          {%- if site.author %}
+            <ul class="contact-list">
+              {% if site.author.name -%}
+                <li class="p-name">{{ site.author.name | escape }}</li>
+              {% endif -%}
+              {% if site.author.email -%}
+                <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+              {%- endif %}
+            </ul>
+          {%- endif %}
+          </div>
+        </div>
+          <div class="social-links">
+            {%- include social.html -%}
+          </div>
+    
       </div>
-    </main>
+    </div>
+  </div>
 
-    {%- include footer.html -%}
+  <main class="page-content" aria-label="Content">
+      {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+</div>
+
 
   </body>
 
